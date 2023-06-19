@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "luckBox_backend": {
+      "main": "src/luckBox_backend/main.mo",
+      "type": "motoko"
+    },
+    "luckBox_frontend": {
+      "dependencies": [
+        "luckBox_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/luckBox_frontend/src/index.html"
+      },
+      "source": [
+        "src/luckBox_frontend/assets",
+        "dist/luckBox_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
